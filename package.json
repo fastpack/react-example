@@ -1,0 +1,32 @@
+{
+  "name": "react-example",
+  "version": "0.1.0",
+  "description": "Showcase for Fastpack",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastpack/react-example.git"
+  },
+  "keywords": [
+    "Fastpack",
+    "JavaScript",
+    "linker"
+  ],
+  "author": "Oleksiy Golovko <alexei.golovko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fastpack/react-example/issues"
+  },
+  "homepage": "https://github.com/fastpack/react-example#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sh ./start.sh"
+  },
+  "devDependencies": {
+    "static-server": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
