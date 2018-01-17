@@ -6,7 +6,7 @@ function Test() {
   return (
       <>
         <h1>
-          Packed with Fastpack! 🚀 
+          Packed with Fastpack! 🚀
         </h1>
         <App />
       </>
