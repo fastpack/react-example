@@ -911,9 +911,9 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-fpack@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/fpack/-/fpack-0.0.2.tgz#0107bcb11494627581dd4b9da25605b743d7b1c9"
+fpack@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/fpack/-/fpack-0.0.3.tgz#9affcd9d399845a49e423e811ea8693e19260091"
 
 fs-readdir-recursive@^1.0.0:
   version "1.1.0"
