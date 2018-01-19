@@ -25,6 +25,7 @@
     "build:es2015": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --transpile '^src' --postprocess 'babel --presets es2015' --postprocess 'uglifyjs -cm' && cp node_modules/babel-polyfill/dist/polyfill.min.js build/js"
   },
   "devDependencies": {
+    "fpack": "0.0.3",
     "babel-polyfill": "^6.26.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
