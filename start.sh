@@ -8,7 +8,7 @@ FPACK_CMD="fpack src/index.js --dev --transpile '^src' --output $PWD/root/js"
 watchman -j <<-EOT >/dev/null 2>/dev/null
 ["trigger", "$ROOT", {
   "name": "js",
-  "command": ["sh", "-c", "echo Packing && (env PATH=\"$PATH\" time $FPACK_CMD) >$TTY 2>$TTY"],
+  "command": ["sh", "-c", "(env PATH=\"$PATH\" $FPACK_CMD) >$TTY 2>$TTY"],
   "stdout": ">>$TTY"
 }]
 EOT
