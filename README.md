@@ -1,5 +1,5 @@
 # react-example
-React application built with Fastpack
+React application built with [Fastpack](https://github.com/fastpack/fastpack)
 
 ![Fastpack in action](/Screenshot.gif?raw=true)
 
