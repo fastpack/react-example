@@ -21,7 +21,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sh ./start.sh",
-    "build": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --transpile '^src' --postprocess 'babel --presets es2015' --postprocess 'uglifyjs -cm' && cp node_modules/babel-polyfill/dist/polyfill.js build/js"
+    "build": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --transpile '^src'",
+    "build:es2015": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --transpile '^src' --postprocess 'babel --presets es2015' --postprocess 'uglifyjs -cm' && cp node_modules/babel-polyfill/dist/polyfill.min.js build/js"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",

@@ -24,11 +24,10 @@ const mapDispatchToProps = dispatch => {
 };
 
 const Header = styled.div`
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  paddingtop: 25px;
-  padding: 15px;
-  padding-bottom: 0;
+  padding: 0.1em;
+  margin: 0;
   font-weight: bold;
 `;
 
@@ -41,15 +40,15 @@ const Button = styled.button`
   cursor: pointer;
   font-size: 1em;
   margin: 0.1em;
-  padding: 0.25em;
-  padding-bottom: 0;
+  padding: 0.2em;
   border: 2px solid ${dark};
   border-radius: 3px;
 `;
 
 const Center = styled.div`
   text-align: center;
-  padding: 20px;
+  padding: 0.1em;
+  padding-bottom: 0;
 `;
 
 const Num = styled.em`
@@ -62,7 +61,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(
     return (
       <>
         <Header>
-          {"Fastpack'd!"} <Rocket />
+          Fastpacked! <Rocket />
         </Header>
         <Center>
           <Num>{num}</Num>
