@@ -10,6 +10,7 @@ const rotate360 = keyframes`
   }
 `;
 
+
 const Rotate = styled.div`
   display: inline-block;
   animation: ${rotate360} 2s linear infinite;

@@ -21,23 +21,35 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sh ./start.sh",
-    "build": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --transpile '^src'",
-    "build:es2015": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --transpile '^src' --postprocess 'babel --presets es2015' --postprocess 'uglifyjs -cm' && cp node_modules/babel-polyfill/dist/polyfill.min.js build/js"
+    "build": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --preprocess '^src'",
+    "build:es2015": "rm -rf build && cp -R root build && rm -rf build/js && fpack src/index.js -o build/js --preprocess '^src' --postprocess 'babel --presets es2015' --postprocess 'uglifyjs -cm' && cp node_modules/babel-polyfill/dist/polyfill.min.js build/js",
+    "build:test": "rm -rf bundle && fpack --dev src/index.js -o build/js --preprocess '^src:babel-loader?filename=.babelrc'"
   },
   "devDependencies": {
-    "fpack": "0.0.3",
-    "babel-polyfill": "^6.26.0",
     "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
+    "fpack": "0.0.4",
     "static-server": "^3.0.0",
-    "uglify-js": "^3.3.7",
-    "fpack": "0.0.4"
+    "uglify-js": "^3.3.7"
   },
   "dependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "d3": "^4.12.2",
+    "date-fns": "*",
+    "lodash-es": "^4.17.4",
+    "material-ui": "^0.20.0",
+    "moment": "*",
+    "plotly.js": "^1.33.1",
+    "polished": "*",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
+    "react-virtualized": "*",
     "redux": "^3.7.2",
     "redux-saga": "^0.16.0",
     "styled-components": "^2.4.0"

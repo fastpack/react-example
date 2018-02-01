@@ -3,7 +3,7 @@
 ROOT="$PWD/src"
 TTY=`tty`
 # FPACK=`which fpack`
-FPACK_CMD="fpack src/index.js --dev --transpile '^src' --output $PWD/root/js"
+FPACK_CMD="fpack /Users/zindel/ocaml/react-example/src/index.js -w --dev --preprocess '^src' --output $PWD/root/js"
 
 watchman -j <<-EOT >/dev/null 2>/dev/null
 ["trigger", "$ROOT", {

@@ -1,7 +1,9 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import Rocket from "./Rocket";
+
+console.log('hello there!');
 
 const mapStateToProps = state => {
   return {
@@ -59,21 +61,20 @@ const Num = styled.em`
 export default connect(mapStateToProps, mapDispatchToProps)(
   ({ num, onIncrement, onDecrement, onRandom }) => {
     return (
-      <>
-        <Header>
-          Fastpacked! <Rocket />
-        </Header>
+      <div>
+        <Header>Rocket Test</Header>
+
         <Center>
-          <Num>{num}</Num>
+          <Num>{num + 8 + 100}</Num>
         </Center>
         <Center>
-          <Button onClick={onIncrement}>Increment</Button>
+          <Button onClick={onIncrement}>Hello there Increment</Button>
           <Button onClick={onDecrement}>Decrement</Button>
           <Button onClick={onRandom} primary>
             Random
           </Button>
         </Center>
-      </>
+      </div>
     );
   }
 );
